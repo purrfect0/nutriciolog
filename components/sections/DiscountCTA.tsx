@@ -58,9 +58,9 @@ export const DiscountCTA: React.FC = () => {
               >
                 <Button
                   variant="gold"
-                  size="lg"
-                  className="w-full sm:w-auto font-bold shadow-xl"
-                  icon={<Send className="w-5 h-5" />}
+                  size="md"
+                  className="w-full sm:w-auto font-bold shadow-xl px-3.5 sm:px-8 py-3.5 sm:py-4 text-xs xs:text-sm sm:text-base whitespace-nowrap tracking-tight sm:tracking-normal"
+                  icon={<Send className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />}
                 >
                   Записаться со скидкой 30%
                 </Button>
