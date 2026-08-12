@@ -19,7 +19,7 @@ export const EXPERT_INFO = {
   philosophySub: 'Сначала разберёмся, чего действительно не хватает вашему организму, — и только потом говорим о добавках.',
   heroTagline: 'Индивидуальный разбор анализов и персональный подход к восстановлению энергии и здоровья.',
   photoUrl: `${basePath}/images/anna-hero.png`,
-  avatarUrl: `${basePath}/images/тг_ава.jpg`,
+  avatarUrl: `${basePath}/images/anna-about.png`,
   qrCodeUrl: `${basePath}/images/qr.png`,
 };
 
