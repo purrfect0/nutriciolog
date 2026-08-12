@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Анна Моложенко — Нутрициолог, Фармацевт, Эксперт по анализам</title>
   <meta name="description" content="Персональный сайт Анны Моложенко: дипломированный фармацевт (красный диплом) и сертифицированный нутрициолог. Индивидуальный разбор анализов, программы восстановления здоровья." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%235C2328%22/><text y=%22.65em%22 font-size=%2255%22 x=%2250%22 text-anchor=%22middle%22 fill=%22%23B8934A%22 font-family=%22serif%22 font-style=%22italic%22 font-weight=%22bold%22>АМ</text></svg>" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -231,8 +232,8 @@
                   { q: 'Плохой сон?', d: 'Трудности с засыпанием и частые ночные просыпания.' }
                 ].map((item, idx) => (
                   <div key={idx} className="bg-cream-100 p-6 rounded-2xl border border-terracotta/15 shadow-sm hover:shadow-md transition-all">
-                    <div className="w-12 h-12 rounded-full bg-terracotta/10 text-terracotta font-bold flex items-center justify-center mb-4">
-                      0{idx + 1}
+                    <div className="w-10 h-10 rounded-full bg-terracotta/10 text-terracotta font-bold flex items-center justify-center mb-4 text-xs">
+                      ✓
                     </div>
                     <h3 className="text-xl font-bold font-playfair mb-2 text-charcoal">{item.q}</h3>
                     <p className="text-sm text-charcoal/75">{item.d}</p>
@@ -382,7 +383,20 @@
               <div className="bg-white p-6 sm:p-10 rounded-3xl border border-cream-300 shadow-md">
                 {!quizCompleted ? (
                   <div>
-                    <div className="mb-6 font-bold text-xs uppercase text-charcoal/60">Отмечено симптомов: {quizSelected.length}</div>
+                    {/* Progress Bar */}
+                    <div className="mb-6">
+                      <div className="flex justify-between text-xs font-bold text-charcoal/60 uppercase tracking-wider mb-2">
+                        <span>Отмечено: {quizSelected.length} из 8</span>
+                        <span>{Math.round((quizSelected.length / 8) * 100)}%</span>
+                      </div>
+                      <div className="w-full h-2.5 bg-cream-200 rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-terracotta transition-all duration-300 rounded-full"
+                          style={{ width: `${Math.round((quizSelected.length / 8) * 100)}%` }}
+                        />
+                      </div>
+                    </div>
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                       {quizQuestions.map(q => (
                         <div
@@ -396,15 +410,26 @@
                       ))}
                     </div>
                     <button onClick={() => setQuizCompleted(true)} className="w-full bg-terracotta text-white py-4 rounded-full font-bold shadow-md hover:bg-terracotta-hover">
-                      Получить результаты
+                      Узнать результаты и рекомендации
                     </button>
                   </div>
                 ) : (
                   <div className="text-center">
-                    <h3 className="text-2xl font-bold font-playfair text-burgundy mb-4">Спасибо за ответы!</h3>
-                    <p className="text-sm text-charcoal/80 mb-6">Напишите в Telegram, чтобы получить индивидуальный разбор под ваши симптомы.</p>
-                    <a href="https://t.me/molozhenkohealthy" target="_blank" className="inline-block bg-terracotta text-white px-8 py-3 rounded-full font-bold text-sm">
-                      Отправить результаты в Telegram
+                    <span className="text-xs uppercase tracking-widest text-charcoal/60 font-bold block mb-1">Ваш результат экспресс-теста</span>
+                    <h3 className="text-2xl sm:text-3xl font-bold font-playfair mb-3">
+                      Вероятность дефицитов: <span className={quizSelected.length === 0 ? 'text-green-600' : quizSelected.length <= 3 ? 'text-gold' : 'text-terracotta'}>
+                        {quizSelected.length === 0 ? 'Низкая' : quizSelected.length <= 3 ? 'Умеренная' : 'Высокая'}
+                      </span>
+                    </h3>
+                    <p className="text-sm text-charcoal/80 mb-6 max-w-xl mx-auto leading-relaxed">
+                      {quizSelected.length === 0
+                        ? 'У вас не выражены явные симптомы дефицитов, однако плановый чек-ап поможет сохранить здоровье.'
+                        : quizSelected.length <= 3
+                        ? `Отмечено ${quizSelected.length} признака дефицитов. Рекомендуется сдать точечный чек-ап для предотвращения усугубления.`
+                        : `Отмечено ${quizSelected.length} признаков дефицита микроэлементов и ресурсов. Рекомендуется индивидуальный разбор анализов!`}
+                    </p>
+                    <a href="https://t.me/molozhenkohealthy" target="_blank" className="inline-block bg-terracotta text-white px-8 py-3.5 rounded-full font-bold text-sm shadow-md hover:bg-terracotta-hover transition-all">
+                      Получить расшифровку в Telegram →
                     </a>
                   </div>
                 )}

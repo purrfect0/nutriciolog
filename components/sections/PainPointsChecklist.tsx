@@ -45,9 +45,9 @@ export const PainPointsChecklist: React.FC = () => {
                 {item.description}
               </p>
 
-              <div className="mt-4 pt-4 border-t border-cream-300 w-full text-right">
-                <span className="text-xs font-bold text-terracotta uppercase tracking-wider">
-                  Шаг 0{index + 1}
+              <div className="mt-auto pt-4 w-full">
+                <span className="text-xs font-semibold text-terracotta/80 uppercase tracking-wider block">
+                  Признак дефицита
                 </span>
               </div>
             </div>
