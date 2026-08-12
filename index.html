@@ -3,9 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Анна Моложенко — Нутрициолог, Фармацевт, Эксперт по анализам</title>
-  <meta name="description" content="Персональный сайт Анны Моложенко: дипломированный фармацевт (красный диплом) и сертифицированный нутрициолог. Индивидуальный разбор анализов, программы восстановления здоровья." />
+  <title>Анна Моложенко — Нутрициолог, фармацевт | Разбор анализов и подбор БАД</title>
+  <meta name="description" content="Дипломированный фармацевт и нутрициолог Анна Моложенко. Комплексный разбор анализов, выявление дефицитов и персональные программы восстановления здоровья." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%235C2328%22/><text y=%22.65em%22 font-size=%2255%22 x=%2250%22 text-anchor=%22middle%22 fill=%22%23B8934A%22 font-family=%22serif%22 font-style=%22italic%22 font-weight=%22bold%22>АМ</text></svg>" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://purrfect0.github.io/nutriciolog/" />
+  <meta property="og:title" content="Анна Моложенко — Дипломированный нутрициолог и фармацевт" />
+  <meta property="og:description" content="Индивидуальный разбор анализов, выявление скрытых дефицитов и пошаговый план восстановления энергии." />
+  <meta property="og:image" content="https://purrfect0.github.io/nutriciolog/images/anna-hero.png" />
+  <meta property="og:locale" content="ru_RU" />
+
+  <!-- Schema.org Microdata (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "#person",
+        "name": "Анна Моложенко",
+        "jobTitle": "Нутрициолог, фармацевт",
+        "description": "Дипломированный фармацевт с красным дипломом и сертифицированный нутрициолог.",
+        "telephone": "+7-983-249-94-17",
+        "sameAs": [
+          "https://t.me/molozhenkohealthy"
+        ]
+      },
+      {
+        "@type": "HealthAndBeautyBusiness",
+        "name": "Нутрициолог Анна Моложенко",
+        "description": "Персональный разбор анализов, выявление дефицитов и составление программ оздоровления.",
+        "telephone": "+7-983-249-94-17",
+        "url": "https://purrfect0.github.io/nutriciolog/",
+        "priceRange": "$$"
+      }
+    ]
+  }
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -144,7 +180,7 @@
               </nav>
 
               <div className="flex items-center gap-3">
-                <a href="tel:89832499417" className="hidden lg:flex items-center gap-2 text-sm font-bold text-charcoal hover:text-terracotta">
+                <a href="tel:+79832499417" className="hidden lg:flex items-center gap-2 text-sm font-bold text-charcoal hover:text-terracotta">
                   <span>8 983 249-94-17</span>
                 </a>
                 <a href="https://t.me/molozhenkohealthy" target="_blank" className="hidden sm:inline-block bg-terracotta text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-terracotta-hover transition-colors shadow-md">
@@ -171,7 +207,7 @@
                   <a href="#contacts" onClick={() => setMobileMenuOpen(false)} className="hover:text-terracotta transition-colors">Контакты</a>
                 </nav>
                 <div className="pt-6 border-t border-cream-300 flex flex-col gap-3 pb-8">
-                  <a href="tel:89832499417" className="py-3 bg-cream-200 rounded-full font-bold text-center text-charcoal">
+                  <a href="tel:+79832499417" className="py-3 bg-cream-200 rounded-full font-bold text-center text-charcoal">
                     📞 8 983 249-94-17
                   </a>
                   <a href="https://t.me/molozhenkohealthy" target="_blank" className="py-3 bg-terracotta text-white rounded-full font-bold text-center">
@@ -217,9 +253,13 @@
                     </span>
                   </div>
 
-                  <h1 className="text-4xl sm:text-6xl font-bold font-playfair text-charcoal leading-tight mb-6">
-                    Вы устали уставать?
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-playfair text-charcoal leading-tight mb-3">
+                    Нутрициолог и фармацевт <span className="text-burgundy font-cormorant">Анна Моложенко</span>
                   </h1>
+
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-playfair text-terracotta mb-5">
+                    Вы устали уставать?
+                  </h2>
 
                   <p className="text-lg sm:text-xl text-charcoal/90 mb-4 font-medium">
                     <span className="font-cormorant text-2xl text-terracotta font-bold">
@@ -567,7 +607,7 @@
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 <div className="lg:col-span-5 bg-white p-8 rounded-3xl border border-cream-300 shadow-sm">
                   <h3 className="text-2xl font-bold font-playfair text-burgundy mb-6">Контакты</h3>
-                  <p className="text-sm font-bold text-charcoal mb-4">Телефон: <a href="tel:89832499417" className="text-terracotta">8 983 249-94-17</a></p>
+                  <p className="text-sm font-bold text-charcoal mb-4">Телефон: <a href="tel:+79832499417" className="text-terracotta">8 983 249-94-17</a></p>
                   <p className="text-sm font-bold text-charcoal mb-6">Telegram: <a href="https://t.me/molozhenkohealthy" target="_blank" className="text-terracotta">@molozhenkohealthy</a></p>
 
                   <div className="p-4 bg-cream-100 rounded-2xl text-center border border-gold/30">

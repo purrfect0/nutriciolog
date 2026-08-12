@@ -60,20 +60,25 @@ export const Hero: React.FC = () => {
           <div className="lg:col-span-7 order-1 lg:order-2 flex flex-col items-start">
             <SectionLabel>{EXPERT_INFO.positioning}</SectionLabel>
 
-            {/* Main Hook Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold font-playfair text-charcoal leading-[1.1] mb-6">
-              {EXPERT_INFO.heroHeadline}
+            {/* Primary SEO H1 Headline */}
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-playfair text-charcoal leading-tight mb-3">
+              Нутрициолог и фармацевт <span className="text-burgundy font-editorial-italic">Анна Моложенко</span>
             </h1>
 
+            {/* Emotional Hook Offer */}
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-playfair text-terracotta mb-5">
+              {EXPERT_INFO.heroHeadline}
+            </h2>
+
             {/* Sub-headline Philosophy */}
-            <p className="text-lg sm:text-xl text-charcoal/90 mb-4 font-medium leading-relaxed">
-              <span className="font-editorial-italic text-2xl text-terracotta font-semibold mr-2">
+            <p className="text-base sm:text-lg text-charcoal/90 mb-4 font-medium leading-relaxed">
+              <span className="font-editorial-italic text-xl text-burgundy font-semibold mr-2">
                 {EXPERT_INFO.philosophyTagline}
               </span>
               — {EXPERT_INFO.philosophySub}
             </p>
 
-            <p className="text-base text-charcoal/70 mb-8 max-w-xl">
+            <p className="text-sm sm:text-base text-charcoal/70 mb-8 max-w-xl">
               {EXPERT_INFO.heroTagline}
             </p>
 

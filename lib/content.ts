@@ -24,8 +24,8 @@ export const EXPERT_INFO = {
 };
 
 export const CONTACT_DATA: ContactInfo = {
-  phone: '8 983 249-94-17',
-  phoneRaw: '89832499417',
+  phone: '8 (983) 249-94-17',
+  phoneRaw: '+79832499417',
   telegramChannel: 'https://t.me/molozhenkohealthy',
   telegramUsername: '@molozhenkohealthy',
   labPartner: 'ЛукаЛаб',
