@@ -105,9 +105,15 @@ export const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Drawer Navigation (Original Frosted Glass Overlay) */}
+      {/* Mobile Drawer Navigation (Photo 2 Frosted Glass Overlay) */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-40 bg-cream-100/85 backdrop-blur-md p-6 pt-28 flex flex-col justify-between overflow-y-auto min-h-screen">
+        <div
+          style={{
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
+          }}
+          className="md:hidden fixed inset-0 z-40 bg-cream-100/90 backdrop-blur-md p-6 pt-28 flex flex-col justify-between overflow-y-auto min-h-screen"
+        >
           <nav className="flex flex-col space-y-6 text-lg font-medium text-charcoal pt-2">
             <a
               href="#about"
