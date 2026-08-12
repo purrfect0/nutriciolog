@@ -14,20 +14,20 @@ export const DiscountCTA: React.FC = () => {
           {/* Decorative Scissors / Coupon Dashed Border */}
           <div className="absolute inset-2 border border-dashed border-gold/30 rounded-2xl pointer-events-none" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center relative z-10">
             
             {/* Left side Coupon Details */}
-            <div className="lg:col-span-8">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold text-burgundy text-xs font-bold uppercase tracking-wider mb-4">
-                <Ticket className="w-4 h-4" />
-                Специальное предложение с сайта и флаера
+            <div className="lg:col-span-8 max-w-full">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold text-burgundy text-xs font-bold uppercase tracking-wider mb-4 max-w-full">
+                <Ticket className="w-4 h-4 shrink-0" />
+                <span className="truncate">Специальное предложение с сайта и флаера</span>
               </div>
 
-              <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 mb-2">
-                <span className="font-playfair text-6xl sm:text-7xl font-black text-gold leading-none">
+              <div className="flex flex-wrap items-baseline gap-2 sm:gap-3 mb-3 max-w-full">
+                <span className="font-playfair text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-black text-gold leading-none shrink-0">
                   -30%
                 </span>
-                <span className="text-2xl sm:text-3xl font-bold font-playfair text-white uppercase tracking-wide">
+                <span className="text-xl sm:text-2xl md:text-3xl font-bold font-playfair text-white uppercase tracking-wide break-words max-w-full leading-tight">
                   НА КОНСУЛЬТАЦИЮ ПО ЗДОРОВЬЮ
                 </span>
               </div>

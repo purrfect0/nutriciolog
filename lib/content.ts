@@ -20,14 +20,14 @@ export const EXPERT_INFO = {
   heroTagline: 'Индивидуальный разбор анализов и персональный подход к восстановлению энергии и здоровья.',
   photoUrl: `${basePath}/images/флаер.png`,
   avatarUrl: `${basePath}/images/тг_ава.jpg`,
-  qrCodeUrl: `${basePath}/images/флаер.png`,
+  qrCodeUrl: `${basePath}/images/qr.png`,
 };
 
 export const CONTACT_DATA: ContactInfo = {
   phone: '8 983 249-94-17',
   phoneRaw: '89832499417',
-  telegramChannel: 'https://t.me/anna_molozhenko', // [УТОЧНИТЬ У КЛИЕНТА]
-  telegramUsername: '@anna_molozhenko',
+  telegramChannel: 'https://t.me/molozhenkohealthy',
+  telegramUsername: '@molozhenkohealthy',
   labPartner: 'ЛукаЛаб',
   labCheckupName: 'Чек-ап «Анна Моложенко»',
   discountAmount: '-30%',
