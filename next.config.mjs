@@ -11,6 +11,7 @@ const nextConfig = {
     ],
   },
   basePath: '/nutriciolog',
+  assetPrefix: '/nutriciolog',
 };
 
 export default nextConfig;
