@@ -156,16 +156,16 @@
               </div>
             </div>
 
-            {/* Mobile Drawer (Translucent Full-screen backdrop blur overlay) */}
+            {/* Mobile Drawer (High-density Frosted Glass Overlay) */}
             {mobileMenuOpen && (
-              <div className="md:hidden fixed inset-0 z-40 bg-cream-100/80 backdrop-blur-xl p-6 pt-28 flex flex-col justify-between overflow-y-auto min-h-screen">
-                <nav className="flex flex-col space-y-6 text-lg font-medium text-charcoal pt-4">
-                  <a href="#about" onClick={() => setMobileMenuOpen(false)}>Обо мне</a>
-                  <a href="#methodology" onClick={() => setMobileMenuOpen(false)}>Методология</a>
-                  <a href="#services" onClick={() => setMobileMenuOpen(false)}>Услуги и Тарифы</a>
-                  <a href="#quiz" onClick={() => setMobileMenuOpen(false)}>Тест дефицитов</a>
-                  <a href="#testimonials" onClick={() => setMobileMenuOpen(false)}>Отзывы клиентов</a>
-                  <a href="#contacts" onClick={() => setMobileMenuOpen(false)}>Контакты</a>
+              <div className="md:hidden fixed inset-0 z-40 bg-cream-100/94 backdrop-blur-3xl backdrop-brightness-95 p-6 pt-28 flex flex-col justify-between overflow-y-auto min-h-screen">
+                <nav className="flex flex-col space-y-6 text-xl font-bold text-charcoal pt-4">
+                  <a href="#about" onClick={() => setMobileMenuOpen(false)} className="hover:text-terracotta transition-colors">Обо мне</a>
+                  <a href="#methodology" onClick={() => setMobileMenuOpen(false)} className="hover:text-terracotta transition-colors">Методология</a>
+                  <a href="#services" onClick={() => setMobileMenuOpen(false)} className="hover:text-terracotta transition-colors">Услуги и Тарифы</a>
+                  <a href="#quiz" onClick={() => setMobileMenuOpen(false)} className="hover:text-terracotta transition-colors">Тест дефицитов</a>
+                  <a href="#testimonials" onClick={() => setMobileMenuOpen(false)} className="hover:text-terracotta transition-colors">Отзывы клиентов</a>
+                  <a href="#contacts" onClick={() => setMobileMenuOpen(false)} className="hover:text-terracotta transition-colors">Контакты</a>
                 </nav>
                 <div className="pt-6 border-t border-cream-300 flex flex-col gap-3 pb-8">
                   <a href="tel:89832499417" className="py-3 bg-cream-200 rounded-full font-bold text-center text-charcoal">

@@ -105,49 +105,49 @@ export const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Drawer Navigation (Translucent Full-screen backdrop blur overlay) */}
+      {/* Mobile Drawer Navigation (High-density Frosted Glass Overlay) */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-40 bg-cream-100/80 backdrop-blur-xl backdrop-saturate-150 p-6 pt-28 flex flex-col justify-between overflow-y-auto min-h-screen">
-          <nav className="flex flex-col space-y-6 text-lg font-medium text-charcoal pt-2">
+        <div className="md:hidden fixed inset-0 z-40 bg-cream-100/94 backdrop-blur-3xl backdrop-brightness-95 p-6 pt-28 flex flex-col justify-between overflow-y-auto min-h-screen">
+          <nav className="flex flex-col space-y-6 text-xl font-bold text-charcoal pt-2">
             <a
               href="#about"
               onClick={() => setMobileMenuOpen(false)}
-              className="hover:text-terracotta"
+              className="hover:text-terracotta transition-colors"
             >
               Обо мне
             </a>
             <a
               href="#methodology"
               onClick={() => setMobileMenuOpen(false)}
-              className="hover:text-terracotta"
+              className="hover:text-terracotta transition-colors"
             >
               Методология
             </a>
             <a
               href="#services"
               onClick={() => setMobileMenuOpen(false)}
-              className="hover:text-terracotta"
+              className="hover:text-terracotta transition-colors"
             >
               Услуги и Тарифы
             </a>
             <a
               href="#quiz"
               onClick={() => setMobileMenuOpen(false)}
-              className="hover:text-terracotta"
+              className="hover:text-terracotta transition-colors"
             >
               Пройти тест
             </a>
             <a
               href="#testimonials"
               onClick={() => setMobileMenuOpen(false)}
-              className="hover:text-terracotta"
+              className="hover:text-terracotta transition-colors"
             >
               Отзывы клиентов
             </a>
             <a
               href="#contacts"
               onClick={() => setMobileMenuOpen(false)}
-              className="hover:text-terracotta"
+              className="hover:text-terracotta transition-colors"
             >
               Контакты
             </a>
