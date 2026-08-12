@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { QUIZ_QUESTIONS, CONTACT_DATA } from '@/lib/content';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { Button } from '@/components/ui/Button';
-import { CheckSquare, Square, AlertCircle, Sparkles, Send, CheckCircle } from 'lucide-react';
+import { CheckSquare, Square, AlertCircle, Sparkles, Send, CheckCircle, ArrowRight } from 'lucide-react';
 
 export const SymptomQuiz: React.FC = () => {
   const [selectedSymptoms, setSelectedSymptoms] = useState<number[]>([]);
@@ -109,9 +109,10 @@ export const SymptomQuiz: React.FC = () => {
               <div className="text-center pt-4 border-t border-cream-300">
                 <Button
                   variant="primary"
-                  size="lg"
+                  size="md"
                   onClick={() => setIsCompleted(true)}
-                  icon={<Sparkles className="w-5 h-5" />}
+                  className="w-full max-w-full font-bold shadow-md px-3.5 sm:px-8 py-3.5 sm:py-4 text-xs xs:text-sm sm:text-base tracking-tight sm:tracking-normal"
+                  icon={<ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />}
                 >
                   Узнать результаты и рекомендации
                 </Button>

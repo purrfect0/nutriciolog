@@ -496,8 +496,9 @@
                         </div>
                       ))}
                     </div>
-                    <button onClick={() => setQuizCompleted(true)} className="w-full bg-terracotta text-white py-4 rounded-full font-bold shadow-md hover:bg-terracotta-hover">
-                      Узнать результаты и рекомендации
+                    <button onClick={() => setQuizCompleted(true)} className="w-full bg-terracotta text-white px-3.5 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-xs xs:text-sm sm:text-base shadow-md hover:bg-terracotta-hover inline-flex items-center justify-center gap-2 max-w-full">
+                      <span>Узнать результаты и рекомендации</span>
+                      <span>→</span>
                     </button>
                   </div>
                 ) : (
@@ -622,8 +623,9 @@
                     <form onSubmit={(e) => { e.preventDefault(); setContactSubmitted(true); }} className="space-y-4">
                       <input type="text" required placeholder="Ваше имя" value={contactName} onChange={e => setContactName(e.target.value)} className="w-full p-3 rounded-xl border border-cream-300 text-sm" />
                       <input type="text" required placeholder="Телефон / Telegram" value={contactPhone} onChange={e => setContactPhone(e.target.value)} className="w-full p-3 rounded-xl border border-cream-300 text-sm" />
-                      <button type="submit" className="w-full bg-terracotta text-white py-3 rounded-full font-bold text-sm">
-                        Отправить заявку
+                      <button type="submit" className="w-full bg-terracotta text-white px-3.5 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-xs xs:text-sm sm:text-base shadow-md hover:bg-terracotta-hover inline-flex items-center justify-center gap-2 whitespace-nowrap overflow-hidden">
+                        <span>Отправить заявку со скидкой 30%</span>
+                        <span>→</span>
                       </button>
                     </form>
                   ) : (

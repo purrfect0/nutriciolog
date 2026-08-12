@@ -169,9 +169,9 @@ export const ContactSection: React.FC = () => {
 
                 <Button
                   variant="primary"
-                  size="lg"
-                  className="w-full shadow-md"
-                  icon={<Send className="w-5 h-5" />}
+                  size="md"
+                  className="w-full max-w-full font-bold shadow-md px-3.5 sm:px-8 py-3.5 sm:py-4 text-xs xs:text-sm sm:text-base tracking-tight sm:tracking-normal whitespace-nowrap overflow-hidden"
+                  icon={<Send className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />}
                 >
                   Отправить заявку со скидкой 30%
                 </Button>
