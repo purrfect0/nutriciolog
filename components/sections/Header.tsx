@@ -90,20 +90,20 @@ export const Header: React.FC = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Toggle Button */}
+          {/* Mobile Menu Toggle Button (z-50 so X is always clickable above full-screen overlay) */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-charcoal hover:text-terracotta focus:outline-none"
+            className="md:hidden relative z-50 p-2 text-charcoal hover:text-terracotta focus:outline-none"
             aria-label="Открыть меню"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-7 h-7 text-burgundy" /> : <Menu className="w-7 h-7 text-charcoal" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Drawer Navigation (Full-screen backdrop blur overlay) */}
+      {/* Mobile Drawer Navigation (Translucent Full-screen backdrop blur overlay) */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-40 bg-cream-100/98 backdrop-blur-2xl p-6 pt-24 flex flex-col justify-between overflow-y-auto min-h-screen">
+        <div className="md:hidden fixed inset-0 z-40 bg-cream-100/80 backdrop-blur-xl backdrop-saturate-150 p-6 pt-28 flex flex-col justify-between overflow-y-auto min-h-screen">
           <nav className="flex flex-col space-y-6 text-lg font-medium text-charcoal pt-2">
             <a
               href="#about"

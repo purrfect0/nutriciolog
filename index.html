@@ -150,15 +150,15 @@
                 <a href="https://t.me/molozhenkohealthy" target="_blank" className="hidden sm:inline-block bg-terracotta text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-terracotta-hover transition-colors shadow-md">
                   Telegram
                 </a>
-                <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden p-2 text-charcoal font-bold text-lg focus:outline-none">
+                <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden relative z-50 p-2 text-burgundy font-bold text-2xl focus:outline-none">
                   {mobileMenuOpen ? '✕' : '☰'}
                 </button>
               </div>
             </div>
 
-            {/* Mobile Drawer (Full-screen backdrop blur overlay) */}
+            {/* Mobile Drawer (Translucent Full-screen backdrop blur overlay) */}
             {mobileMenuOpen && (
-              <div className="md:hidden fixed inset-0 z-40 bg-cream-100/98 backdrop-blur-2xl p-6 pt-24 flex flex-col justify-between overflow-y-auto min-h-screen">
+              <div className="md:hidden fixed inset-0 z-40 bg-cream-100/80 backdrop-blur-xl p-6 pt-28 flex flex-col justify-between overflow-y-auto min-h-screen">
                 <nav className="flex flex-col space-y-6 text-lg font-medium text-charcoal pt-4">
                   <a href="#about" onClick={() => setMobileMenuOpen(false)}>Обо мне</a>
                   <a href="#methodology" onClick={() => setMobileMenuOpen(false)}>Методология</a>
