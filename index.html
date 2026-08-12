@@ -479,6 +479,63 @@
                 )}
               </div>
             </div>
+          {/* TESTIMONIALS */}
+          <section id="testimonials" className="py-20 bg-cream-200 border-y border-cream-300">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <span className="text-xs uppercase font-bold tracking-widest text-terracotta block mb-2">Отзывы клиентов</span>
+                <h2 className="text-3xl sm:text-5xl font-bold font-playfair text-charcoal">Истории восстановления</h2>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {[
+                  {
+                    name: 'Елена В.',
+                    role: 'Клиент программы разбора анализов',
+                    text: 'Обратилась к Анне с постоянной усталостью — к 2 часам дня буквально засыпала. Анна объяснила всё по анализам простым языком, нашла дефицит ферритина и витамина D. Через 3 недели по новой схеме вернулась энергия!',
+                    result: 'Появилась бодрость, ферритин поднялся с 12 до 45',
+                    tag: 'Через Telegram'
+                  },
+                  {
+                    name: 'Мария К.',
+                    role: 'Клиент персональной программы',
+                    text: 'После родов выпадали волосы и не уходил вес. Анна скорректировала рацион и подобрала правильные формы нутриентов. За 2 месяца не только восстановились волосы, но и ушло 4 кг без жестких диет.',
+                    result: 'Восстановились волосы, -4 кг без жестких ограничений',
+                    tag: 'Через Telegram'
+                  },
+                  {
+                    name: 'Ольга П.',
+                    role: 'Клиент первичной консультации',
+                    text: 'Очень благодарна Анне за деликатный подход. Раньше пила кучу БАДов вслепую по советам из интернета. Анна убрала всё лишнее и оставила только то, что реально было в дефиците по анализам.',
+                    result: 'Улучшилось самочувствие, экономия на ненужных БАД',
+                    tag: 'Через Telegram'
+                  }
+                ].map((item, idx) => (
+                  <div key={idx} className="bg-white rounded-3xl p-8 border border-cream-300 shadow-sm flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center justify-between mb-4">
+                        <span className="text-terracotta font-bold text-sm">★★★★★</span>
+                        <span className="text-[11px] font-bold uppercase tracking-wider text-burgundy bg-burgundy/10 px-3 py-1 rounded-full border border-burgundy/15">
+                          {item.tag}
+                        </span>
+                      </div>
+                      <p className="text-sm text-charcoal/85 leading-relaxed mb-6 italic">«{item.text}»</p>
+                    </div>
+
+                    <div>
+                      <div className="flex items-start gap-2 text-xs text-charcoal bg-cream-100 p-3 rounded-r-xl mb-6 border-l-3 border-terracotta border border-cream-300 border-l-terracotta">
+                        <span className="font-bold text-terracotta shrink-0">✓ Результат:</span>
+                        <span className="font-medium text-charcoal/90">{item.result}</span>
+                      </div>
+                      <div className="pt-4 border-t border-cream-300">
+                        <h3 className="font-bold font-playfair text-charcoal">{item.name}</h3>
+                        <p className="text-xs text-charcoal/60">{item.role}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </section>
 
           {/* DISCOUNT CTA */}
