@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Анна Моложенко — Нутрициолог, фармацевт | Разбор анализов и подбор БАД</title>
   <meta name="description" content="Дипломированный фармацевт и нутрициолог Анна Моложенко. Комплексный разбор анализов, выявление дефицитов и персональные программы восстановления здоровья." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%235C2328%22/><text y=%22.65em%22 font-size=%2255%22 x=%2250%22 text-anchor=%22middle%22 fill=%22%23B8934A%22 font-family=%22serif%22 font-style=%22italic%22 font-weight=%22bold%22>АМ</text></svg>" />
+  <link rel="icon" href="public/images/logo-emblem.jpg" type="image/jpeg" />
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
@@ -161,13 +161,16 @@
           {/* HEADER */}
           <header className={`fixed top-0 left-0 right-0 z-50 transition-all ${mobileMenuOpen ? 'bg-cream-100/98 backdrop-blur-md shadow-md border-b border-cream-300 py-3' : 'bg-cream-100/90 backdrop-blur-md border-b border-cream-300 py-3'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-              <a href="#" onClick={() => setMobileMenuOpen(false)} className="relative z-50 flex flex-col">
-                <span className="font-cormorant text-2xl sm:text-3xl font-bold text-burgundy">
-                  Анна Моложенко
-                </span>
-                <span className="text-[10px] uppercase tracking-widest text-charcoal/60 font-semibold">
-                  Нутрициолог · Фармацевт
-                </span>
+              <a href="#" onClick={() => setMobileMenuOpen(false)} className="relative z-50 flex items-center gap-2.5 sm:gap-3 group">
+                <img src="public/images/logo-emblem.jpg" alt="Анна Моложенко" className="w-9 h-9 sm:w-11 sm:h-11 rounded-full object-cover shadow-sm border border-gold/40 shrink-0" />
+                <div className="flex flex-col">
+                  <span className="font-cormorant text-xl sm:text-2xl font-bold text-burgundy leading-tight">
+                    Анна Моложенко
+                  </span>
+                  <span className="text-[9px] sm:text-[10px] uppercase tracking-widest text-charcoal/60 font-semibold">
+                    Нутрициолог · Фармацевт
+                  </span>
+                </div>
               </a>
 
               <nav className="hidden md:flex items-center space-x-6 text-sm font-semibold text-charcoal">
@@ -233,7 +236,7 @@
                     </div>
 
                     <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-cream-200 aspect-[3/4]">
-                      <img src="public/images/anna-hero.png" alt="Анна Моложенко" className="w-full h-full object-cover object-top" />
+                      <img src="public/images/anna-about.png" alt="Анна Моложенко" className="w-full h-full object-cover object-top" />
                       
                       {/* Photo Caption Overlay in Dark Burgundy Glass Pill */}
                       <div className="absolute bottom-4 left-4 right-4 p-3.5 bg-burgundy/90 backdrop-blur-md rounded-xl text-white shadow-xl border border-gold/40">
@@ -366,7 +369,7 @@
                 <div className="lg:col-span-5 flex justify-center">
                   <div className="relative max-w-sm w-full">
                     <div className="rounded-3xl overflow-hidden border-2 border-gold/40 shadow-2xl aspect-[3/4]">
-                      <img src="public/images/anna-about.png" alt="Анна Моложенко" className="w-full h-full object-cover" />
+                      <img src="public/images/anna-hero.png" alt="Анна Моложенко" className="w-full h-full object-cover" />
                     </div>
                   </div>
                 </div>

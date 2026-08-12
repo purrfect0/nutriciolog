@@ -42,18 +42,25 @@ export const Header: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Logo (z-50 so logo is clickable in mobile menu) */}
+          {/* Brand Logo with Emblem Image */}
           <a
             href="#"
             onClick={() => setMobileMenuOpen(false)}
-            className="relative z-50 flex flex-col group"
+            className="relative z-50 flex items-center gap-2.5 sm:gap-3 group"
           >
-            <span className="font-editorial-italic text-2xl md:text-3xl font-bold text-burgundy tracking-wide group-hover:text-terracotta transition-colors">
-              {EXPERT_INFO.name}
-            </span>
-            <span className="text-[10px] md:text-xs uppercase tracking-widest text-charcoal-50 font-semibold">
-              Нутрициолог · Фармацевт
-            </span>
+            <img
+              src={EXPERT_INFO.logoUrl}
+              alt={EXPERT_INFO.name}
+              className="w-9 h-9 sm:w-11 sm:h-11 rounded-full object-cover shadow-sm border border-gold/40 shrink-0 group-hover:scale-105 transition-transform"
+            />
+            <div className="flex flex-col">
+              <span className="font-editorial-italic text-xl sm:text-2xl md:text-3xl font-bold text-burgundy tracking-wide group-hover:text-terracotta transition-colors leading-tight">
+                {EXPERT_INFO.name}
+              </span>
+              <span className="text-[9px] sm:text-[10px] md:text-xs uppercase tracking-widest text-charcoal-50 font-semibold">
+                Нутрициолог · Фармацевт
+              </span>
+            </div>
           </a>
 
           {/* Desktop Navigation */}

@@ -18,8 +18,9 @@ export const EXPERT_INFO = {
   philosophyTagline: '«Не спешите покупать БАДы»',
   philosophySub: 'Сначала разберёмся, чего действительно не хватает вашему организму, — и только потом говорим о добавках.',
   heroTagline: 'Индивидуальный разбор анализов и персональный подход к восстановлению энергии и здоровья.',
-  photoUrl: `${basePath}/images/anna-hero.png`,
-  avatarUrl: `${basePath}/images/anna-about.png`,
+  photoUrl: `${basePath}/images/anna-about.png`,
+  avatarUrl: `${basePath}/images/anna-hero.png`,
+  logoUrl: `${basePath}/images/logo-emblem.jpg`,
   qrCodeUrl: `${basePath}/images/qr.png`,
 };
 
