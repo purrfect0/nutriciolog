@@ -1,12 +1,33 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { CONTACT_DATA } from '@/lib/content';
 import { Send } from 'lucide-react';
 
 export const TelegramFloatingButton: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleBodyMutation = () => {
+      if (document.body.style.overflow === 'hidden') {
+        setIsMenuOpen(true);
+      } else {
+        setIsMenuOpen(false);
+      }
+    };
+
+    const observer = new MutationObserver(handleBodyMutation);
+    observer.observe(document.body, { attributes: true, attributeFilter: ['style'] });
+
+    return () => observer.disconnect();
+  }, []);
+
+  if (isMenuOpen) {
+    return null; // Hide floating TG button when mobile menu is open
+  }
+
   return (
-    <div className="fixed bottom-6 right-6 z-50 group">
+    <div className="fixed bottom-6 right-6 z-40 group transition-all duration-300">
       {/* Hover Tooltip */}
       <div className="absolute right-full top-1/2 -translate-y-1/2 mr-3 opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-300 transform group-hover:translate-x-0 translate-x-2">
         <div className="bg-charcoal text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-lg whitespace-nowrap flex items-center gap-1.5 border border-gold/30">

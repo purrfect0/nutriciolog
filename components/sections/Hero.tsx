@@ -17,19 +17,19 @@ export const Hero: React.FC = () => {
           {/* Left Column — Editorial Photo Frame (Anna looking right towards text) */}
           <div className="lg:col-span-5 order-2 lg:order-1 relative flex justify-center">
             <div className="relative w-full max-w-md lg:max-w-none">
-              {/* Outer decorative ring */}
-              <div className="absolute -inset-4 rounded-3xl border-2 border-gold/30 -rotate-2 pointer-events-none" />
-              <div className="absolute -inset-4 rounded-3xl border border-terracotta/20 rotate-2 pointer-events-none" />
+              {/* Outer decorative ring (desktop only to prevent mobile overflow) */}
+              <div className="hidden sm:block absolute -inset-4 rounded-3xl border-2 border-gold/30 -rotate-2 pointer-events-none" />
+              <div className="hidden sm:block absolute -inset-4 rounded-3xl border border-terracotta/20 rotate-2 pointer-events-none" />
 
-              {/* Floating Badge Card - Moved to Top Right to avoid overlapping bottom caption */}
-              <div className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 bg-white/95 backdrop-blur-md rounded-2xl p-3.5 sm:p-4 shadow-card border border-gold/40 max-w-[210px] z-20">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-burgundy flex items-center justify-center text-white font-bold text-sm shrink-0">
+              {/* Floating Badge Card */}
+              <div className="absolute top-3 right-3 sm:-top-6 sm:-right-6 bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-4 shadow-card border border-gold/40 max-w-[190px] sm:max-w-[210px] z-20">
+                <div className="flex items-center gap-2.5 sm:gap-3">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-burgundy flex items-center justify-center text-white font-bold text-xs sm:text-sm shrink-0">
                     -30%
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-burgundy uppercase leading-snug">Скидка на запись</p>
-                    <p className="text-[11px] text-charcoal/70">При получении купона</p>
+                    <p className="text-[11px] sm:text-xs font-bold text-burgundy uppercase leading-snug">Скидка на запись</p>
+                    <p className="text-[10px] sm:text-[11px] text-charcoal/70">При получении купона</p>
                   </div>
                 </div>
               </div>

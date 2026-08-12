@@ -101,9 +101,9 @@ export const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Drawer Navigation */}
+      {/* Mobile Drawer Navigation (Full-screen backdrop blur overlay) */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-x-0 bottom-0 top-[60px] bg-cream-100/98 backdrop-blur-2xl z-50 p-6 flex flex-col justify-between border-t border-cream-300 overflow-y-auto shadow-2xl">
+        <div className="md:hidden fixed inset-0 z-40 bg-cream-100/98 backdrop-blur-2xl p-6 pt-24 flex flex-col justify-between overflow-y-auto min-h-screen">
           <nav className="flex flex-col space-y-6 text-lg font-medium text-charcoal pt-2">
             <a
               href="#about"

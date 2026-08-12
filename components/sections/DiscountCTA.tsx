@@ -18,9 +18,9 @@ export const DiscountCTA: React.FC = () => {
             
             {/* Left side Coupon Details */}
             <div className="lg:col-span-8 max-w-full">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold text-burgundy text-xs font-bold uppercase tracking-wider mb-4 max-w-full">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-2xl bg-gold text-burgundy text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-4 max-w-full leading-snug">
                 <Ticket className="w-4 h-4 shrink-0" />
-                <span className="truncate">Специальное предложение с сайта и флаера</span>
+                <span>Специальное предложение с сайта и флаера</span>
               </div>
 
               <div className="flex flex-wrap items-baseline gap-2 sm:gap-3 mb-3 max-w-full">
