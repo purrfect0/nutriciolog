@@ -12,10 +12,55 @@ export const Hero: React.FC = () => {
       <div className="absolute bottom-10 right-[-5%] w-80 h-80 bg-terracotta/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
           
-          {/* Left Column — Text & CTAs */}
-          <div className="lg:col-span-7 flex flex-col items-start">
+          {/* Left Column — Editorial Photo Frame (Anna looking right towards text) */}
+          <div className="lg:col-span-5 order-2 lg:order-1 relative flex justify-center">
+            <div className="relative w-full max-w-md lg:max-w-none">
+              {/* Outer decorative ring */}
+              <div className="absolute -inset-4 rounded-3xl border-2 border-gold/30 -rotate-2 pointer-events-none" />
+              <div className="absolute -inset-4 rounded-3xl border border-terracotta/20 rotate-2 pointer-events-none" />
+
+              {/* Main Photo Container */}
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-cream-200 border-4 border-white aspect-[3/4]">
+                <img
+                  src={EXPERT_INFO.photoUrl}
+                  alt={EXPERT_INFO.name}
+                  className="w-full h-full object-cover object-top"
+                />
+                
+                {/* Subtle Gradient Overlay at bottom */}
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent opacity-75" />
+
+                {/* Photo Caption Overlay */}
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <p className="font-editorial-italic text-2xl font-bold leading-tight">
+                    {EXPERT_INFO.name}
+                  </p>
+                  <p className="text-xs tracking-wider uppercase text-gold">
+                    Эксперт по лабораторным показателям
+                  </p>
+                </div>
+              </div>
+
+              {/* Floating Badge Card */}
+              <div className="absolute -bottom-6 -right-6 sm:-bottom-8 sm:-right-8 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-card border border-gold/30 max-w-[220px]">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-burgundy flex items-center justify-center text-white font-bold text-sm shrink-0">
+                    -30%
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-burgundy uppercase">Скидка на запись</p>
+                    <p className="text-[11px] text-charcoal/70">При получении купона</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Right Column — Text & CTAs */}
+          <div className="lg:col-span-7 order-1 lg:order-2 flex flex-col items-start">
             <SectionLabel>{EXPERT_INFO.positioning}</SectionLabel>
 
             {/* Main Hook Headline */}
@@ -91,51 +136,6 @@ export const Hero: React.FC = () => {
               </div>
             </div>
 
-          </div>
-
-          {/* Right Column — Editorial Photo Frame */}
-          <div className="lg:col-span-5 relative flex justify-center">
-            <div className="relative w-full max-w-md lg:max-w-none">
-              {/* Outer decorative ring */}
-              <div className="absolute -inset-4 rounded-3xl border-2 border-gold/30 rotate-2 pointer-events-none" />
-              <div className="absolute -inset-4 rounded-3xl border border-terracotta/20 -rotate-2 pointer-events-none" />
-
-              {/* Main Photo Container */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-cream-200 border-4 border-white aspect-[3/4]">
-                <img
-                  src={EXPERT_INFO.photoUrl}
-                  alt={EXPERT_INFO.name}
-                  className="w-full h-full object-cover object-top"
-                />
-                
-                {/* Subtle Gradient Overlay at bottom */}
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent opacity-80" />
-
-                {/* Photo Caption Overlay */}
-                <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <p className="font-editorial-italic text-2xl font-bold leading-tight">
-                    {EXPERT_INFO.name}
-                  </p>
-                  <p className="text-xs tracking-wider uppercase text-gold">
-                    Эксперт по лабораторным показателям
-                  </p>
-                </div>
-              </div>
-
-              {/* Floating Badge Card */}
-              <div className="absolute -bottom-6 -left-6 sm:-bottom-8 sm:-left-8 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-card border border-gold/30 max-w-[220px]">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-burgundy flex items-center justify-center text-white font-bold text-sm">
-                    -30%
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-burgundy uppercase">Скидка на запись</p>
-                    <p className="text-[11px] text-charcoal/70">При получении купона</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
           </div>
 
         </div>

@@ -147,7 +147,21 @@
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <div className="lg:col-span-7">
+                {/* Photo Column on the left (looking right towards text) */}
+                <div className="lg:col-span-5 order-2 lg:order-1 flex justify-center">
+                  <div className="relative max-w-md w-full">
+                    <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-cream-200 aspect-[3/4]">
+                      <img src="public/images/anna-hero.png" alt="Анна Моложенко" className="w-full h-full object-cover object-top" />
+                    </div>
+                    <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-xl border border-gold/30 max-w-[200px]">
+                      <span className="text-2xl font-bold text-burgundy block font-playfair">-30% Скидка</span>
+                      <span className="text-[11px] text-charcoal/70 font-semibold">На консультацию по здоровью</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Text Column on the right */}
+                <div className="lg:col-span-7 order-1 lg:order-2">
                   <div className="inline-flex items-center gap-2 mb-4">
                     <span className="h-px w-6 bg-terracotta"></span>
                     <span className="text-xs uppercase font-bold tracking-widest text-terracotta">
@@ -193,18 +207,6 @@
                         Сертифицированный нутрициолог
                         <span className="block text-[11px] text-gold font-normal normal-case">Индивидуальный разбор анализов</span>
                       </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="lg:col-span-5 flex justify-center">
-                  <div className="relative max-w-md w-full">
-                    <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-cream-200 aspect-[3/4]">
-                      <img src="public/images/флаер.png" alt="Анна Моложенко" className="w-full h-full object-cover object-top" />
-                    </div>
-                    <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-gold/30 max-w-[200px]">
-                      <span className="text-2xl font-bold text-burgundy block font-playfair">-30% Скидка</span>
-                      <span className="text-[11px] text-charcoal/70 font-semibold">На консультацию по здоровью</span>
                     </div>
                   </div>
                 </div>
