@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,600;1,700&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-cream: #F7F1E6;
+  --bg-surface-alt: #EFE6D8;
+  --text-dark: #241F1C;
+  --accent-terracotta: #9C4A3C;
+  --accent-burgundy: #5C2328;
+  --accent-gold: #B8934A;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #F7F1E6;
+  color: #241F1C;
+  line-height: 1.7;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F1E6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B8934A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9C4A3C;
+}
+
+/* Editorial typography tweaks */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-editorial-italic {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
+
+/* Pulsing animation for Telegram button */
+@keyframes pulse-subtle {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(156, 74, 60, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 14px rgba(156, 74, 60, 0);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s infinite ease-in-out;
+}
+
+/* Glassmorphic elements where subtle border is needed */
+.warm-glass {
+  background: rgba(247, 241, 230, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(184, 147, 74, 0.2);
+}
