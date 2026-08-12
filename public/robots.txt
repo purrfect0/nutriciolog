@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://purrfect0.github.io/nutriciolog/sitemap.xml
