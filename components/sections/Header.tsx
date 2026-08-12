@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { EXPERT_INFO, CONTACT_DATA } from '@/lib/content';
 import { Button } from '@/components/ui/Button';

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { CONTACT_DATA } from '@/lib/content';
 import { Send } from 'lucide-react';

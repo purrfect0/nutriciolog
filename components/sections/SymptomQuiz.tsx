@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { QUIZ_QUESTIONS, CONTACT_DATA } from '@/lib/content';
 import { SectionLabel } from '@/components/ui/SectionLabel';

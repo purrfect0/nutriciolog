@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { ScrollProgressBar } from '@/components/widgets/ScrollProgressBar';
 import { Header } from '@/components/sections/Header';
