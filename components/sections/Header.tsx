@@ -46,18 +46,18 @@ export const Header: React.FC = () => {
           <a
             href="#"
             onClick={() => setMobileMenuOpen(false)}
-            className="relative z-50 flex items-center gap-2.5 sm:gap-3 group"
+            className="relative z-50 flex items-center gap-3 sm:gap-3.5 group"
           >
             <img
               src={EXPERT_INFO.logoUrl}
               alt={EXPERT_INFO.name}
-              className="w-9 h-9 sm:w-11 sm:h-11 rounded-full object-cover shadow-sm border border-gold/40 shrink-0 group-hover:scale-105 transition-transform"
+              className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full object-cover shadow-md border-2 border-gold/50 shrink-0 group-hover:scale-105 transition-transform"
             />
             <div className="flex flex-col">
-              <span className="font-editorial-italic text-xl sm:text-2xl md:text-3xl font-bold text-burgundy tracking-wide group-hover:text-terracotta transition-colors leading-tight">
+              <span className="font-editorial-italic text-2xl sm:text-3xl md:text-3xl font-bold text-burgundy tracking-wide group-hover:text-terracotta transition-colors leading-tight">
                 {EXPERT_INFO.name}
               </span>
-              <span className="text-[9px] sm:text-[10px] md:text-xs uppercase tracking-widest text-charcoal-50 font-semibold">
+              <span className="text-[10px] sm:text-xs uppercase tracking-widest text-charcoal-50 font-semibold">
                 Нутрициолог · Фармацевт
               </span>
             </div>
