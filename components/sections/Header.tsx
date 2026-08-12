@@ -21,11 +21,22 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-cream-100/90 backdrop-blur-md shadow-soft py-3 border-b border-cream-300'
+        isScrolled || mobileMenuOpen
+          ? 'bg-cream-100/95 backdrop-blur-md shadow-soft py-3 border-b border-cream-300'
           : 'bg-transparent py-5'
       }`}
     >
@@ -92,8 +103,8 @@ export const Header: React.FC = () => {
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-[60px] bg-cream-100/98 backdrop-blur-xl z-40 p-6 flex flex-col justify-between border-t border-cream-300">
-          <nav className="flex flex-col space-y-6 text-lg font-medium text-charcoal">
+        <div className="md:hidden fixed inset-x-0 bottom-0 top-[60px] bg-cream-100/98 backdrop-blur-2xl z-50 p-6 flex flex-col justify-between border-t border-cream-300 overflow-y-auto shadow-2xl">
+          <nav className="flex flex-col space-y-6 text-lg font-medium text-charcoal pt-2">
             <a
               href="#about"
               onClick={() => setMobileMenuOpen(false)}
@@ -138,7 +149,7 @@ export const Header: React.FC = () => {
             </a>
           </nav>
 
-          <div className="flex flex-col gap-4 pt-6 border-t border-cream-300">
+          <div className="flex flex-col gap-4 pt-6 border-t border-cream-300 pb-8">
             <a
               href={`tel:${CONTACT_DATA.phoneRaw}`}
               className="flex items-center justify-center gap-2 py-3 bg-cream-200 rounded-full font-semibold text-charcoal"

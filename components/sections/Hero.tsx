@@ -21,6 +21,19 @@ export const Hero: React.FC = () => {
               <div className="absolute -inset-4 rounded-3xl border-2 border-gold/30 -rotate-2 pointer-events-none" />
               <div className="absolute -inset-4 rounded-3xl border border-terracotta/20 rotate-2 pointer-events-none" />
 
+              {/* Floating Badge Card - Moved to Top Right to avoid overlapping bottom caption */}
+              <div className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 bg-white/95 backdrop-blur-md rounded-2xl p-3.5 sm:p-4 shadow-card border border-gold/40 max-w-[210px] z-20">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-burgundy flex items-center justify-center text-white font-bold text-sm shrink-0">
+                    -30%
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-burgundy uppercase leading-snug">Скидка на запись</p>
+                    <p className="text-[11px] text-charcoal/70">При получении купона</p>
+                  </div>
+                </div>
+              </div>
+
               {/* Main Photo Container */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-cream-200 border-4 border-white aspect-[3/4]">
                 <img
@@ -29,30 +42,14 @@ export const Hero: React.FC = () => {
                   className="w-full h-full object-cover object-top"
                 />
                 
-                {/* Subtle Gradient Overlay at bottom */}
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent opacity-75" />
-
-                {/* Photo Caption Overlay */}
-                <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <p className="font-editorial-italic text-2xl font-bold leading-tight">
+                {/* Photo Caption Overlay with Dark Burgundy Frosted Badge */}
+                <div className="absolute bottom-4 left-4 right-4 p-3.5 bg-burgundy/90 backdrop-blur-md rounded-xl text-white shadow-xl border border-gold/40">
+                  <p className="font-editorial-italic text-2xl font-bold leading-tight text-white">
                     {EXPERT_INFO.name}
                   </p>
-                  <p className="text-xs tracking-wider uppercase text-gold">
+                  <p className="text-xs tracking-wider uppercase font-bold text-gold mt-0.5">
                     Эксперт по лабораторным показателям
                   </p>
-                </div>
-              </div>
-
-              {/* Floating Badge Card */}
-              <div className="absolute -bottom-6 -right-6 sm:-bottom-8 sm:-right-8 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-card border border-gold/30 max-w-[220px]">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-burgundy flex items-center justify-center text-white font-bold text-sm shrink-0">
-                    -30%
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-burgundy uppercase">Скидка на запись</p>
-                    <p className="text-[11px] text-charcoal/70">При получении купона</p>
-                  </div>
                 </div>
               </div>
 
