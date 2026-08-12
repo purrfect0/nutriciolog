@@ -8,6 +8,8 @@ import {
   ContactInfo,
 } from './types';
 
+const basePath = '/nutriciolog';
+
 export const EXPERT_INFO = {
   name: 'Анна Моложенко',
   signature: 'Анна Моложенко',
@@ -16,9 +18,9 @@ export const EXPERT_INFO = {
   philosophyTagline: '«Не спешите покупать БАДы»',
   philosophySub: 'Сначала разберёмся, чего действительно не хватает вашему организму, — и только потом говорим о добавках.',
   heroTagline: 'Индивидуальный разбор анализов и персональный подход к восстановлению энергии и здоровья.',
-  photoUrl: '/images/флаер.png',
-  avatarUrl: '/images/тг_ава.jpg',
-  qrCodeUrl: '/images/флаер.png',
+  photoUrl: `${basePath}/images/флаер.png`,
+  avatarUrl: `${basePath}/images/тг_ава.jpg`,
+  qrCodeUrl: `${basePath}/images/флаер.png`,
 };
 
 export const CONTACT_DATA: ContactInfo = {

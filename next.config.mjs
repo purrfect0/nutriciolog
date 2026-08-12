@@ -10,8 +10,7 @@ const nextConfig = {
       },
     ],
   },
-  // If deploying to username.github.io/repo-name, uncomment basePath:
-  // basePath: '/nutrient',
+  basePath: '/nutriciolog',
 };
 
 export default nextConfig;
