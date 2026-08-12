@@ -125,7 +125,7 @@
           {/* HEADER */}
           <header className={`fixed top-0 left-0 right-0 z-50 transition-all ${mobileMenuOpen ? 'bg-cream-100/98 backdrop-blur-md shadow-md border-b border-cream-300 py-3' : 'bg-cream-100/90 backdrop-blur-md border-b border-cream-300 py-3'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-              <a href="#" className="flex flex-col">
+              <a href="#" onClick={() => setMobileMenuOpen(false)} className="relative z-50 flex flex-col">
                 <span className="font-cormorant text-2xl sm:text-3xl font-bold text-burgundy">
                   Анна Моложенко
                 </span>

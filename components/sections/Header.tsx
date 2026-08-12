@@ -42,8 +42,12 @@ export const Header: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Logo */}
-          <a href="#" className="flex flex-col group">
+          {/* Brand Logo (z-50 so logo is clickable in mobile menu) */}
+          <a
+            href="#"
+            onClick={() => setMobileMenuOpen(false)}
+            className="relative z-50 flex flex-col group"
+          >
             <span className="font-editorial-italic text-2xl md:text-3xl font-bold text-burgundy tracking-wide group-hover:text-terracotta transition-colors">
               {EXPERT_INFO.name}
             </span>
